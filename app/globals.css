@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.bg-down{
+    background-image: url('/images/bg/wave-haikei.png');
+    background-size: cover;
+    background-repeat: repeat-x;
+    background-size: 100% 10%;
+    background-position: bottom;
+    
+}
+.bg-down2{
+    background-image: url('/images/bg/bg2.png');
+    background-size: cover;
+    background-repeat: repeat;
+    padding-bottom: 4%;
+    
+}

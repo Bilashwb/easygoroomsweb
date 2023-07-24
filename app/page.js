@@ -7,7 +7,7 @@ export default function page() {
   <>
 <Hero/>
 
-<div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+<div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto bg-down">
   <div className="grid lg:grid-cols-2 gap-6">
     <a className="group sm:flex" href="#">
       <div className="flex-shrink-0 relative rounded-xl overflow-hidden w-full h-[200px] sm:w-[250px] sm:h-[350px]">

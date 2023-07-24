@@ -2,10 +2,10 @@ import React from 'react'
 
 export default function Hero() {
   return (
-    <div class=" max-w-[85rem] mx-auto px-4 sm:px-6  lg:px-8 ">
+    <div class=" max-w-[85rem] mx-auto px-4 sm:px-6  lg:px-8  ">
 
   <div class="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
-    <div>
+    <div className=''>
       <h1 class="block text-3xl font-bold text-gray-800 sm:text-4xl lg:text-4xl lg:leading-tight dark:text-white">Start your journey with <span class="text-blue-600">EasyGoRooms</span></h1>
       <p class="mt-3 text-lg text-gray-800 dark:text-gray-400">Hand-picked professionals and expertly crafted components, designed for any kind of entrepreneur.</p>
 
@@ -94,7 +94,7 @@ export default function Hero() {
     </div>
 
 
-    <div class="relative ml-4">
+    <div class="relative ml-4 ">
       <img class="w-full rounded-md" src="https://images.unsplash.com/photo-1665686377065-08ba896d16fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&h=800&q=80" alt="Image Description"/>
       <div class="absolute inset-0 -z-[1] bg-gradient-to-tr from-gray-200 via-white/0 to-white/0 w-full h-full rounded-md mt-4 -mb-4 mr-4 -ml-4 lg:mt-6 lg:-mb-6 lg:mr-6 lg:-ml-6 dark:from-slate-800 dark:via-slate-900/0 dark:to-slate-900/0"></div>
 
