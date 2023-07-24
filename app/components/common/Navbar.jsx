@@ -27,11 +27,11 @@ export default function Navbar() {
           <div class="overflow-hidden overflow-y-auto max-h-[75vh] scrollbar-y">
             <div class="flex flex-col gap-x-0 mt-5 divide-y divide-dashed divide-gray-200 md:flex-row md:items-center md:justify-end md:gap-x-7 md:mt-0 md:pl-7 md:divide-y-0 md:divide-solid dark:divide-gray-700">
               <a class="font-medium text-gray-600 hover:text-gray-500 py-3 md:py-6 dark:text-gray-400 dark:hover:text-gray-500" href="#" aria-current="page">
-                Landing
+                Home
               </a>
 
               <a class="font-medium text-gray-600 hover:text-gray-500 py-3 md:py-6 dark:text-gray-400 dark:hover:text-gray-500" href="#">
-                Company
+                About Us
               </a>
 
               <div class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] py-3 md:py-4">
