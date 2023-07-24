@@ -2,6 +2,10 @@
 import './globals.css';
 import {useEffect} from 'react'
 import { Inter } from 'next/font/google'
+import Navbar from './components/common/Navbar';
+import Footer from './components/common/Footer';
+import RequestForm from './components/common/RequestForm';
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +20,18 @@ export default function RootLayout({ children }) {
   }, [])
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+
+        <title>Easy Go Rooms</title>
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico"/>
+        
+      </head>
+      <body className={inter.className}>
+        <Navbar/>
+        {children}
+        <Footer/>
+        <RequestForm/>
+        </body>
     </html>
   )
 }
