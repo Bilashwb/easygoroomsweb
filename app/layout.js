@@ -1,4 +1,6 @@
-import './globals.css'
+"use client"
+import './globals.css';
+import {useEffect} from 'react'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -9,6 +11,9 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  useEffect(() => {
+    import('preline')
+  }, [])
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
