@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 .bg-down{
     background-image: url('/images/bg/wave-haikei.png');
     background-size: cover;
