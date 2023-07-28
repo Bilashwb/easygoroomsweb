@@ -91,7 +91,7 @@ export default function Navbar() {
                     </div>
 
                     <div className="flex flex-col mx-1 md:mx-0">
-                      <Link className="group flex gap-x-5 text-gray-800 hover:bg-gray-100 rounded-md p-4 dark:text-gray-200 dark:hover:bg-gray-900" href="#">
+                      <Link className="group flex gap-x-5 text-gray-800 hover:bg-gray-100 rounded-md p-4 dark:text-gray-200 dark:hover:bg-gray-900" href="/pages/services/digitalmarketing">
                       <img src="/images/services/digital-marketing-logo.png" alt=""  height={20} width={30}/>
                      
                         <div className="grow">
@@ -100,7 +100,7 @@ export default function Navbar() {
                         </div>
                       </Link>
 
-                      <Link className="group flex gap-x-5 text-gray-800 hover:bg-gray-100 rounded-md p-4 dark:text-gray-200 dark:hover:bg-gray-900" href="#">
+                      <Link className="group flex gap-x-5 text-gray-800 hover:bg-gray-100 rounded-md p-4 dark:text-gray-200 dark:hover:bg-gray-900" href="/pages/services/webdev">
                       <img src="/images/services/web-development-logo.png" alt=""  height={20} width={40}/>
                         <div className="grow">
                           <p className="font-medium text-gray-800 dark:text-gray-200">Website Design & Development</p>
