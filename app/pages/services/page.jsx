@@ -8,55 +8,55 @@ export default function page() {
         image: '/images/product/Revenue Management.png',
         title: 'Revenue Management',
         subtitle: 'Dynamically manage rates with competition analysis',
-        url: '/services/revenue'
+        url: '/pages/services/revenue'
     },
     {
         image: '/images/product/ota.png',
         title: 'OTA Management',
         subtitle: 'Managing OTA pricing to get more bookings.',
-        url: '/services/ota'
+        url: '/pages/services/ota'
     },
     {
         image: '/images/product/Reservation-Management.png',
         title: 'Reservation Management',
         subtitle: 'Managing OTA pricing to get more bookings.',
-        url: '/services/reservation'
+        url: '/pages/services/reservation'
     },
     {
         image: '/images/product/Reputation Management.png',
         title: 'Reputation Management',
         subtitle: 'Dynamically manage rates with competition analysis.',
-        url: '/services/reputation'
+        url: '/pages/services/reputation'
     },
     {
         image: '/images/product/booking-engine.png',
         title: 'Booking Engine',
         subtitle: 'Managing rates on website to get more direct bookings.',
-        url: '/services/booking'
+        url: '/pages/services/booking'
     },
     {
         image: '/images/product/digital-marketing.png',
         title: 'Digital Marketing',
         subtitle: 'Help your guests to find your hotel.',
-        url: '/services/digital'
+        url: '/pages/services/digitalmarketing'
     },
     {
         image: '/images/product/google-my-business.png',
         title: 'Google Business',
         subtitle: 'Creating digital marketing plan defining the digital channel strategy.',
-        url: '/services/google'
+        url: '/pages/services/googlebusiness'
     },
     {
         image: '/images/product/website-design-development.png',
         title: 'Website Design & Development',
         subtitle: 'An intuitive and easy-to-navigate website to get more bookings.',
-        url: '/services/website'
+        url: '/pages/services/webdev'
     },
     {
         image: '/images/product/photography.png',
         title: 'Photography & Promotion',
         subtitle: 'To elevate your hotel, check out our suggestions for hotel photography.',
-        url: '/services/photography'
+        url: '/pages/services/photography'
     }
 ];
 return (
