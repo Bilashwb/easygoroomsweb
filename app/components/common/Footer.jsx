@@ -8,7 +8,7 @@ export default function Footer() {
 		<div className="lg:w-1/3">
 			<Link rel="noopener noreferrer" href="#" className=" justify-center space-x-3 lg:justify-start">
 				<div className="flex items-center justify-center w-60 h-20 mb-8 rounded-full dark:bg-violet-400">
-					<img src="/images/logos/footer-logo.png" className='h-60 w-3/4'/>
+					<img src="/images/logos/footer-logo.png" className='h-24 w-3/4'/>
 				</div>
 			</Link>
 			<p className='px-3  text-sm text-white'>Easygorooms HospitalityPvt Ltd. It is one of its kind Hotel OTA & Revenue Managementservice provider that simplifies the life of Hoteliers.</p>
