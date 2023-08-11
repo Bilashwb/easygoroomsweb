@@ -64,9 +64,6 @@ export default function Footer() {
 					<li>
 						<Link rel="noopener noreferrer" href="#">Address :  4/35 Saheed Nagar, Jadavpur, Kolkata-31</Link>
 					</li>
-					<li>
-						<Link rel="noopener noreferrer" href="/guides">Guides</Link>
-					</li>
 				</ul>
 			</div>
 			<div className="space-y-3 text-white">

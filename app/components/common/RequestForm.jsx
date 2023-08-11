@@ -1,7 +1,58 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react';
+import axios from 'axios';
 
 export default function RequestForm() {
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: null,
+    email: '',
+    pname: '',
+    rooms: 0,
+    location: ''
+  });
+
+  const [errors, setErrors] = useState({});
+  const validateForm = () => {
+    let newErrors = {};
+    if (!formData.name) newErrors.name = 'Name is required';
+    if (!formData.phone) newErrors.phone = 'Phone Number is required';
+    if (!formData.pname) newErrors.pname = 'Property Name is required';
+    if (!formData.rooms.length) newErrors.rooms = 'No of Rooms is required';
+    if (!formData.location) newErrors.location = 'Property Location  is required';
+
+    // Add more validation rules for other fields
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0; // Return true if there are no errors
+  };
+
+  const formHandle = (e) => {
+    e.preventDefault();
+
+    if (validateForm()) {
+      // Form is valid, you can proceed with form submission
+      console.log('Form submitted:', formData);
+      axios.post('https://dev.easygorooms.com/index.php',formData)
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+
+      
+    }
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
+
   return (
     <>
     
@@ -21,13 +72,43 @@ export default function RequestForm() {
           </svg>
         </button>
       </div>
-      <div className="p-4 overflow-y-auto">
-      <input type="text" className="py-3 px-4 block w-full border border-black rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-800 mb-2" placeholder="Full Name"/>
-      <input type="text" className="py-3 px-4 block w-full border border-black rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400  mb-2" placeholder="Contact No"/>
-      <input type="text" className="py-3 px-4 block w-full border border-black rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400  mb-2" placeholder="Email Id"/>
-      <input type="text" className="py-3 px-4 block w-full border border-black rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400  mb-2" placeholder="Property Name"/>
-      <input type="text" className="py-3 px-4 block w-full border border-black rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400  mb-2" placeholder="No of Rooms"/>
-      <input type="text" className="py-3 px-4 block w-full border border-black rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400  mb-2" placeholder="Property Location"/>
+    <form onSubmit={formHandle}>
+    <div className="p-4 overflow-y-auto">
+        {errors.name && <span className="text-red-500 text-xs">{errors.name}</span>}
+      <input type="text" className="py-3 px-4 block w-full border border-black rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-800 mb-2" placeholder="Full Name" name="name"
+          value={formData.name}
+          onChange={handleChange}/>
+      {errors.phone && <span className="text-red-500 text-xs">{errors.phone}</span>}
+      <input type="number" min={0} className="py-3 px-4 block w-full border border-black rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400  mb-2" placeholder="Contact No"
+      name="phone"
+      value={formData.phone}
+      onChange={handleChange}
+      
+     />
+      {errors.email && <span className="text-red-500 text-xs">{errors.email}</span>}
+      <input type="text" className="py-3 px-4 block w-full border border-black rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400  mb-2" placeholder="Email Id" 
+        name="email"
+        value={formData.email}
+        onChange={handleChange}
+   />
+      {errors.pname && <span className="text-red-500 text-xs">{errors.pname}</span>}
+      <input type="text" className="py-3 px-4 block w-full border border-black rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400  mb-2" placeholder="Property Name"
+       name="pname"
+       value={formData.pname}
+        onChange={handleChange}/>
+      {errors.pname && <span className="text-red-500 text-xs">{errors.pname}</span>}
+      <input type="number" min={0} className="py-3 px-4 block w-full border border-black rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400  mb-2" placeholder="No of Rooms" 
+      
+      name="rooms"
+      value={formData.rooms}
+      onChange={handleChange}
+      />
+      {errors.location && <span className="text-red-500 text-xs">{errors.location}</span>}
+      <input type="text" className="py-3 px-4 block w-full border border-black rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400  mb-2" placeholder="Property Location" 
+      name="location"
+      value={formData.location}
+      onChange={handleChange}
+      />
 
       </div>
       <div className="flex justify-end items-center gap-x-2 py-3 px-4 border-t dark:border-gray-700">
@@ -41,10 +122,11 @@ export default function RequestForm() {
              data-hs-overlay="#hs-slide-down-animation-modal">
           Close
         </button>
-        <a className="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800" href="#">
+        <button type='submit' className="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800" href="#">
           Get Started
-        </a>
+        </button>
       </div>
+    </form>
     </div>
   </div>
 </div>
