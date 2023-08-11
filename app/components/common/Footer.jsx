@@ -3,20 +3,20 @@ import React from 'react'
 
 export default function Footer() {
   return (
-<footer className=" px-4 divide-y dark:bg-gray-800 dark:text-gray-100 border-t-2 border-b-slate-500 bg-down ">
+<footer className="bg-blue-800 px-4 divide-y dark:bg-gray-800 dark:text-white border-t-2 border-b-slate-500">
 	<div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
 		<div className="lg:w-1/3">
 			<Link rel="noopener noreferrer" href="#" className=" justify-center space-x-3 lg:justify-start">
 				<div className="flex items-center justify-center w-60 h-20 mb-8 rounded-full dark:bg-violet-400">
-					<img src="/images/logos/easygorooms-footer-logo.png" className='h-20 w-2/4'/>
+					<img src="/images/logos/footer-logo.png" className='h-60 w-3/4'/>
 				</div>
 			</Link>
-			<p className='px-3  text-sm'>Easygorooms HospitalityPvt Ltd. It is one of its kind Hotel OTA & Revenue Managementservice provider that simplifies the life of Hoteliers.</p>
+			<p className='px-3  text-sm text-white'>Easygorooms HospitalityPvt Ltd. It is one of its kind Hotel OTA & Revenue Managementservice provider that simplifies the life of Hoteliers.</p>
 		</div>
 		<div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
 			<div className="space-y-3">
-				<h3 className="tracki uppercase dark:text-gray-50">QUICK LINKS</h3>
-				<ul className="space-y-1">
+				<h3 className="tracki uppercase text-white">QUICK LINKS</h3>
+				<ul className="space-y-1 text-white">
 					<li>
 						
 						<Link rel="noopener noreferrer" href="/pages/about">About Us</Link>
@@ -39,8 +39,8 @@ export default function Footer() {
 				</ul>
 			</div>
 			<div className="space-y-3">
-				<h3 className="tracki uppercase dark:text-gray-50">Our Products</h3>
-				<ul className="space-y-1">
+				<h3 className="tracki uppercase text-white">Our Products</h3>
+				<ul className="space-y-1 text-white">
 					<li>
 						<Link rel="noopener noreferrer" href="/pages/services">Sevices</Link>
 					</li>
@@ -49,7 +49,7 @@ export default function Footer() {
 					</li>
 				</ul>
 			</div>
-			<div className="space-y-3">
+			<div className="space-y-3 text-white">
 				<h3 className="uppercase dark:text-gray-50">Contact Us</h3>
 				<ul className="space-y-1">
 					<li>
@@ -69,7 +69,7 @@ export default function Footer() {
 					</li>
 				</ul>
 			</div>
-			<div className="space-y-3">
+			<div className="space-y-3 text-white">
 				<div className="uppercase dark:text-gray-50">Social media</div>
 				<div className="flex justify-start space-x-3">
 					<Link rel="noopener noreferrer" href="#" title="Facebook" className="flex items-center p-1">
@@ -91,7 +91,7 @@ export default function Footer() {
 			</div>
 		</div>
 	</div>
-	<div className="py-6 text-sm text-center  dark:text-gray-400">© 2023 Easy Go Rooms Hospitality Pvt Ltd. All rights reserved.</div>
+	<div className="py-6 text-sm text-center  text-white">© 2023 Easy Go Rooms Hospitality Pvt Ltd. All rights reserved.</div>
 
 </footer>
   )

@@ -46,8 +46,7 @@ export default function page() {
       notice. Continued use of our website after any changes shall constitute your consent to such changes.</p>
 
     <h2 class="text-xl font-semibold mb-4">8. Governing Law</h2>
-    <p class="mb-8">These terms and conditions shall be governed by and construed in accordance with the laws of [Your
-      Country/State], without regard to its conflict of laws principles.</p>
+    <p class="mb-8">These terms and conditions shall be governed by and construed in accordance with the laws of West Bengal,India without regard to its conflict of laws principles.</p>
 
     <h2 class="text-xl font-semibold mb-4">9. Contact Us</h2>
     <p class="mb-4">If you have any questions or concerns about these terms and conditions or how we operate, please
